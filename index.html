@@ -5,45 +5,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assignment 02</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
   <div class="container">
     <header>
-      <nav>
-        <h1><a href="#">Fitness</a></h1>
+      <nav class="c-width">
+        <h1 class="l-name"><a href="#">Fitness</a></h1>
 
         <ul>
-          <li>Home</li>
-          <li>Service</li>
-          <li>Contact</li>
-          <li>About</li>
+          <li class="nav-menu home-menu">Home</li>
+          <li class="nav-menu">Service</li>
+          <li class="nav-menu">Contact</li>
+          <li class="nav-menu">About</li>
+          <li class="nav-btn"><button><i class="fa-solid fa-bars"></i></button></li>
         </ul>
       </nav>
 
-      <div class="banner">
+      <div class="banner c-width">
         <div class="banner-desc">
-          <h1>Get body in shape & stay healthy</h1>
+          <h1 class="banner-heading">Get body in
+            <br>
+            <span class="cursive">shape</span> & stay
+            <br>
+            healthy
+          </h1>
           <p>A huge selection of health and
             fitness content, healthy recipes
             and transformation stories to help
             you get fit and stay fit!</p>
           <div>
-            <button>Join Now!</button>
-            <button>Download App</button>
+            <button class="c-btn banner-btn-1">Join Now!</button>
+            <button class="c-btn banner-btn-2">Download App</button>
           </div>
         </div>
 
         <div class="banner-img">
           <img src="./images/Images 1.png" alt="img">
-          <div>
+
+          <div class="b-videos">
             <h1>500+</h1>
             <p>Free Workout Videos</p>
           </div>
 
-          <div>
-            <i>play</i>
+          <div class="b-tutorials">
+            <div class="circle"></div>
             <div>
               <h3>350+</h3>
               <p>Video tutorial</p>
@@ -54,10 +64,208 @@
     </header>
 
     <main>
+      <section class="c-padding c-width">
+        <h1 class="c-heading-1">Change Your Habits</h1>
+        <p class="c-desc-1">We believe fitness should be accessible to everyone, everywhere, regardless of income or
+          access to a gym.</p>
+        <div class="habits-card-container">
+          <div class="habit-card">
+            <img src="./images/image 3.png" alt="img">
+            <h5>Movement</h5>
+            <p class="c-desc-1">We believe fitness should be accessible to everyone</p>
+          </div>
+          <div class="habit-card">
+            <img src="./images/image 2.png" alt="img">
+            <h5>Time</h5>
+            <p class="c-desc-1">We believe fitness should be accessible to everyone</p>
+          </div>
+          <div class="habit-card">
+            <img src="./images/image 4.png" alt="img">
+            <h5>Practice</h5>
+            <p class="c-desc-1">We believe fitness should be accessible to everyone</p>
+          </div>
+          <div class="habit-card">
+            <img src="images/image 5.png" alt="img">
+            <h5>Weight Loss</h5>
+            <p class="c-desc-1">We believe fitness should be accessible to everyone</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="run c-width">
+        <div class="run-desc">
+          <h2 class="c-heading-1">Run an Extra
+            <br>
+            Mile Easily
+          </h2>
+          <p class="c-desc-1">We believe fitness should be accessible to everyone, everywhere, regardless of income or
+            access to a gym. With hundreds
+            of professional workouts.</p>
+          <button class="run-btn c-btn">Join Now</button>
+        </div>
+
+        <div class="run-img">
+          <img src="./images/run.jpg" alt="img">
+        </div>
+      </section>
+
+      <section class="own-sec c-width c-padding">
+        <div></div>
+      </section>
+
+      <section class="bmi-sec">
+        <h2 class="c-heading-1">BMI Calculator</h2>
+        <p class="c-desc-1">We believe fitness should be accessible to everyone, everywhere, regardless of
+          income or
+          access to a gym.</p>
+        <div class="bmi-calculator">
+          <div class="c-width bmi-inn">
+            <div class="bmi-chart">
+              <h4>BMI Calculator Chart</h4>
+              <table>
+                <tr>
+                  <th>BMI</th>
+                  <th>Weight Status</th>
+                </tr>
+                <tr>
+                  <td>Below 18.5</td>
+                  <td>Underweight</td>
+                </tr>
+                <tr>
+                  <td>18.5 - 24.9</td>
+                  <td>Healthy</td>
+                </tr>
+                <tr>
+                  <td>25.0 - 29.0</td>
+                  <td>Overweight</td>
+                </tr>
+                <tr>
+                  <td>30.0 - and Above</td>
+                  <td>Obese</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="bmi-calculate">
+              <h4>Calculate your BMI</h4>
+              <p class="c-desc-1">We believe fitness should be accessible to everyone, everywhere, regardless of
+                income or access to a gym.</p>
+              <form>
+                <div class="bmi-form">
+                  <input class="i-height" type="number" placeholder="Height/cm" required>
+                  <input class="i-weight" type="number" placeholder="Weight/kg" required>
+
+                  <input class="i-age" type="number" placeholder="Age" required>
+                  <select class="i-sex" required>
+                    <option value="sex">Sex</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                  </select>
+
+                  <select class="i-activity" required>
+                    <option value="select an activity factor">Select an activity factor</option>
+                    <option value="hight physical activity">Hight physical activity</option>
+                    <option value="medium physical activity">Medium physical activity</option>
+                    <option value="low physical activity">Low physical activity</option>
+                    <option value="no physical activity">No physical activity</option>
+                  </select>
+                </div>
+
+                <button class="c-btn" type="submit">Calculate</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="meet-sec c-width c-padding">
+        <h2 class="c-heading-1">Meet Out Team</h2>
+        <p class="c-desc-1">We believe fitness should be accessible to everyone, everywhere, regardless of income or
+          access to a gym.</p>
+        <div class="meet-container">
+          <div class="meet-card">
+            <img src="./images/trainer1.png" alt="img">
+            <div>
+              <h4>Jerome Bell</h4>
+              <p class="c-desc-1">Trainer</p>
+            </div>
+          </div>
+          <div class="meet-card">
+            <img src="./images/trainer2.png" alt="img">
+            <div>
+              <h4>Cameron Will..</h4>
+              <p class="c-desc-1">Trainer</p>
+            </div>
+          </div>
+          <div class="meet-card">
+            <img src="./images/trainer3.png" alt="img">
+            <div>
+              <h4>Darrell Steward</h4>
+              <p class="c-desc-1">Trainer</p>
+            </div>
+          </div>
+          <div class="meet-card">
+            <img src="./images/trainer4.png" alt="img">
+            <div>
+              <h4>Dianne Russell</h4>
+              <p class="c-desc-1">Trainer</p>
+            </div>
+          </div>
+          <div class="meet-card">
+            <img src="./images/trainer5.png" alt="img">
+            <div>
+              <h4>Cody Fisher</h4>
+              <p class="c-desc-1">Trainer</p>
+            </div>
+          </div>
+          <div class="meet-card">
+            <img src="./images/trainer6.png" alt="img">
+            <div>
+              <h4>Theresa Webb</h4>
+              <p class="c-desc-1">Trainer</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="footer-container c-width">
+        <div class="footer-h-content">
+          <h1 class="c-heading-1">Fitness</h1>
+          <p class="c-desc-1">We believe fitness should be accessible to everyone, everywhere, regardless of income or
+            access to a gym. With hundreds of professional workouts.</p>
+        </div>
+        <div class="footer-desc-container">
+          <div class="footer-desc">
+            <div>
+              <h2>Get Started</h2>
+              <ul>
+                <li>Services</li>
+                <li>Contact Us</li>
+                <li>Affiliate Program</li>
+                <li>About Us</li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-desc">
+            <div>
+              <h2>Get Started</h2>
+              <ul>
+                <li>Fitness</li>
+                <li>Platform</li>
+                <li>Workout Library</li>
+                <li>App Design</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="footer-foot c-width c-desc-1">All right reserved @Fitness 2024</p>
+    </footer>
   </div>
+
 </body>
 
 </html>
