@@ -1,0 +1,88 @@
+/* Food Sec Starts */
+@keyframes food-card-anim {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(95vw - 1370px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.food-card-container {
+  margin-top: 4rem;
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+}
+.food-card {
+  background-color: var(--c-gray);
+  width: 326px;
+  min-width: 326px;
+  border-radius: 0.8rem;
+
+  animation-name: food-card-anim;
+  animation-timing-function: linear;
+  animation-direction: linear;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+.food-card-container:hover .food-card {
+  animation-play-state: paused;
+}
+.food-card img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+.food-card-desc {
+  padding: 1rem 2rem;
+  text-align: left;
+}
+.food-card div h3 {
+  font-size: 1.5rem;
+}
+.food-card div p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  margin: 1rem 0 1.2rem 0;
+}
+/* Food Sec Ends */
+/* Media Query */
+@media screen and (min-width: 576px) {
+  /* Food Starts */
+  .food-card {
+    animation-duration: 25s;
+  }
+  /* Food Ends */
+}
+
+@media screen and (min-width: 992px) {
+  /* Food Starts */
+  .food-card {
+    animation-duration: 20s;
+  }
+  /* Food Ends */
+}
+@media screen and (min-width: 1200px) {
+  @keyframes food-card-anim2 {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-218px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .food-card {
+    animation-name: food-card-anim2;
+    animation-duration: 15s;
+  }
+}

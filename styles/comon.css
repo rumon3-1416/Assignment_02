@@ -1,0 +1,64 @@
+/* Common Styles Starts */
+.cursive {
+  font-family: 'Italianno', cursive;
+}
+.c-width {
+  width: 95%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.c-padding {
+  padding: 36px 0 66px 0;
+  text-align: center;
+}
+.c-heading-1 {
+  font-size: 32px;
+  font-weight: 900;
+}
+.c-desc-1 {
+  color: var(--c-desc);
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+.c-btn {
+  color: white;
+  background-color: var(--c-orange);
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.c-btn:hover {
+  transform: scale(1.05);
+}
+/* Common Styles Starts */
+
+/* Media Query */
+@media screen and (min-width: 576px) {
+  /* Common Styles */
+  .c-padding {
+    padding: 100px 0 84px 0;
+  }
+  .c-btn {
+    padding: 16px 40px;
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  /* Common Styles */
+}
+
+@media screen and (min-width: 992px) {
+  /* Common Styles */
+  .c-padding {
+    padding: 100px 0 100px 0;
+  }
+  .c-heading-1 {
+    font-size: 48px;
+  }
+  .c-btn {
+    padding: 16px 50px;
+  }
+  /* Common Styles */
+}

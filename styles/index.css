@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Italianno&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+:root {
+  --c-orange: rgb(230, 83, 60);
+  --c-gray: rgb(34, 34, 34);
+  --c-desc: rgba(255, 255, 255, 0.5);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+main {
+  background-color: black;
+}
+
+.container {
+  color: white;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}

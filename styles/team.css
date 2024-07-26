@@ -1,0 +1,88 @@
+/* Meet Team Starts */
+.meet-sec > p {
+  margin: 14px auto 37px auto;
+}
+.meet-container {
+  background-color: rgb(26, 26, 26);
+  border-radius: 18px;
+  padding: 20px;
+  display: grid;
+  grid-template-areas:
+    'meet-c-2'
+    'meet-c-5'
+    'meet-c-3'
+    'meet-c-6';
+  gap: 20px;
+}
+
+.meet-c-1,
+.meet-c-4 {
+  display: none;
+}
+
+.meet-c-1 {
+  grid-area: meet-c-1;
+}
+.meet-c-2 {
+  grid-area: meet-c-2;
+}
+.meet-c-3 {
+  grid-area: meet-c-3;
+}
+.meet-c-4 {
+  grid-area: meet-c-4;
+}
+.meet-c-5 {
+  grid-area: meet-c-5;
+}
+.meet-c-6 {
+  grid-area: meet-c-6;
+}
+.meet-card {
+  position: relative;
+}
+.meet-card img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 7 / 6;
+  border-radius: 18px;
+}
+.meet-card div {
+  text-align: left;
+  position: absolute;
+  bottom: 20px;
+  left: 1rem;
+}
+.meet-card div h4 {
+  font-size: 20px;
+  font-weight: 900;
+}
+/* Meet Team Ends */
+/* Media Query */
+@media screen and (min-width: 576px) {
+  /* Meet Team Starts */
+  .meet-sec > p {
+    margin: 14px auto 54px auto;
+  }
+  .meet-container {
+    grid-template-areas:
+      'meet-c-1 meet-c-2'
+      'meet-c-3 meet-c-4'
+      'meet-c-5 meet-c-6';
+  }
+  .meet-c-1,
+  .meet-c-4 {
+    display: block;
+  }
+  /* Meet Team Ends */
+}
+
+@media screen and (min-width: 992px) {
+  /* Meet Team Ends */
+  .meet-container {
+    grid-template-areas:
+      'meet-c-1 meet-c-2 meet-c-3'
+      'meet-c-4 meet-c-5 meet-c-6';
+  }
+  /* Meet Team Ends */
+}

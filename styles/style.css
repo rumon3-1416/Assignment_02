@@ -192,6 +192,9 @@ main {
 .change-habits h1 {
   margin-bottom: 14px;
 }
+.chp {
+  margin-top: 14px;
+}
 .habits-card-container {
   padding-top: 56px;
   display: grid;
@@ -238,14 +241,103 @@ main {
 }
 /* Run Ends */
 
-/* Won Sec Starts */
-.own-sec {
+/* Food Sec Starts */
+@keyframes food-card-anim {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(95vw - 1370px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.food-card-container {
+  padding-top: 4rem;
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+}
+.food-card {
+  background-color: var(--c-gray);
+  width: 326px;
+  min-width: 326px;
+  border-radius: 0.8rem;
+
+  animation-name: food-card-anim;
+  animation-timing-function: linear;
+  animation-direction: linear;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+.food-card-container:hover .food-card {
+  animation-play-state: paused;
+}
+.food-card img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+.food-card-desc {
+  padding: 1rem 2rem;
+  text-align: left;
+}
+.food-card div h3 {
+  font-size: 1.5rem;
+}
+.food-card div p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  margin: 1rem 0 1.2rem 0;
+}
+/* Food Sec Ends */
+
+/* Training Section Starts */
+.train-img-container {
   border: 1px solid aqua;
+  display: flex;
+  flex-wrap: wrap;
 }
-.own-sec div {
-  border: 1px solid yellow;
+.train-img {
+  /* position: relative; */
 }
-/* Won Sec Ends */
+.train-img-1 {
+  width: 50%;
+}
+.train-img-2 {
+  width: 50%;
+}
+.train-img-3 {
+  display: none;
+}
+.train-img-4 {
+  width: 45%;
+}
+.train-img-5 {
+  width: 55%;
+}
+.train-img-6 {
+  display: none;
+}
+.train-img img {
+  width: 100%;
+}
+/* .train-img > div {
+  background-color: rgba(0, 255, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+} */
+.train-img > div > div > p {
+  color: green;
+}
+/* Training Section Ends */
 
 /* BMI Starts */
 .bmi-sec h2,
@@ -284,7 +376,7 @@ th {
   padding: 15px 18px;
 }
 td {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--c-desc);
   font-size: 14px;
   padding: 13px 18px;
 }
@@ -292,46 +384,30 @@ td {
 .bmi-calculate > p {
   margin: 14px 0 34px 0;
 }
-/* .i-height {
-  grid-template: 'i-height';
+
+.i-height {
+  grid-area: i-height;
 }
 .i-weight {
-  grid-template: 'i-weight';
+  grid-area: i-weight;
 }
 .i-age {
-  grid-template: 'i-age';
+  grid-area: i-age;
 }
 .i-sex {
-  grid-template: 'i-sex';
+  grid-area: i-sex;
 }
 .i-activity {
-  grid-template: 'i-activity';
-} */
-/* .i-height {
-  grid-template: i-height;
+  grid-area: i-activity;
 }
-.i-weight {
-  grid-template: i-weight;
-}
-.i-age {
-  grid-template: i-age;
-}
-.i-sex {
-  grid-template: i-sex;
-}
-.i-activity {
-  grid-template: i-activity;
-} */
 .bmi-form {
-  border: 1px solid greenyellow;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* grid-template-areas: 'i-height' 'i-weight', 'i-age' 'i-sex',    'i-activity' 'i-activity'; */
-  /* grid-template-areas: i-height i-weight, i-age i-sex, i-activity i-activity; */
+  grid-template-areas:
+    'i-height i-weight'
+    'i-age i-sex'
+    'i-activity i-activity';
   gap: 12px;
 }
-/* 'i-height' 'i-weight', 'i-age' 'i-sex',
-    'i-activity' 'i-activity' */
 .bmi-form input,
 .bmi-form select {
   background-color: rgba(255, 255, 255, 0.1);
@@ -343,20 +419,72 @@ td {
 .bmi-form input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
+.bmi-form select option {
+  background-color: rgb(57, 57, 57);
+}
 .bmi-calculate button {
   margin-top: 34px;
 }
 /* BMI Ends */
 
 /* Meet Team Starts */
+.meet-sec > p {
+  margin: 14px auto 37px auto;
+}
 .meet-container {
-  border: 1px solid yellow;
+  background-color: rgb(26, 26, 26);
+  border-radius: 18px;
+  padding: 20px;
+  display: grid;
+  grid-template-areas:
+    'meet-c-2'
+    'meet-c-5'
+    'meet-c-3'
+    'meet-c-6';
+  gap: 20px;
+}
+
+.meet-c-1,
+.meet-c-4 {
+  display: none;
+}
+
+.meet-c-1 {
+  grid-area: meet-c-1;
+}
+.meet-c-2 {
+  grid-area: meet-c-2;
+}
+.meet-c-3 {
+  grid-area: meet-c-3;
+}
+.meet-c-4 {
+  grid-area: meet-c-4;
+}
+.meet-c-5 {
+  grid-area: meet-c-5;
+}
+.meet-c-6 {
+  grid-area: meet-c-6;
 }
 .meet-card {
-  border: 1px solid red;
+  position: relative;
 }
 .meet-card img {
-  width: 80%;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 7 / 6;
+  border-radius: 18px;
+}
+.meet-card div {
+  text-align: left;
+  position: absolute;
+  bottom: 20px;
+  left: 1rem;
+}
+.meet-card div h4 {
+  font-size: 20px;
+  font-weight: 900;
 }
 /* Meet Team Ends */
 /* Main Ends */
@@ -365,31 +493,38 @@ td {
 footer {
   background-color: var(--c-gray);
 }
-.footer-h-content > h1 {
-  color: var(--c-orange);
-  font-style: italic;
-}
-
 .footer-container {
-  border: 1px solid red;
+  padding-top: 50px;
 }
 .footer-h-content {
-  border: 1px solid violet;
+  padding-bottom: 30px;
 }
-.footer-desc-container {
-  border: 1px solid aqua;
+.footer-h-content > h1 {
+  color: var(--c-orange);
+  font-size: 70px;
+  font-weight: 800;
+  font-style: italic;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
-.footer-desc {
-  border: 1px solid yellow;
+
+.footer-desc > div > h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 39px;
 }
-.footer-desc > div {
-  border: 1px solid chartreuse;
+.footer-desc > div > ul li {
+  color: var(--c-desc);
+  font-size: 23px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 .footer-foot {
+  font-size: 20px;
   text-align: center;
-  padding: 1.5rem;
-  border-top: 3px solid rgba(255, 255, 255, 0.1);
-  margin-top: 1rem;
+  padding: 2rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  margin-top: 4.5rem;
 }
 /* Footer Ends */
 
@@ -465,6 +600,10 @@ footer {
   .habits-card-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  .chp {
+    width: 60%;
+    margin: 14px auto 0 auto;
+  }
   /* Change Habits Ends */
 
   /* Run Starts */
@@ -486,7 +625,50 @@ footer {
   }
   /* Run Ends */
 
+  /* Food Starts */
+  .food-card {
+    animation-duration: 25s;
+  }
+  /* Food Ends */
+
+  /* Training Section Starts */
+  /* .train-img-1 {
+  width: 50%;
+}
+.train-img-2 {
+  width: 50%;
+}
+.train-img-3 {
+  display: block;
+}
+.train-img-4 {
+  width: 45%;
+}
+.train-img-5 {
+  width: 55%;
+}
+.train-img-6 {
+  display: block;
+}
+.train-img img {
+  width: 100%;
+} */
+  /* Training Section Ends */
+
   /* Meet Team Starts */
+  .meet-sec > p {
+    margin: 14px auto 54px auto;
+  }
+  .meet-container {
+    grid-template-areas:
+      'meet-c-1 meet-c-2'
+      'meet-c-3 meet-c-4'
+      'meet-c-5 meet-c-6';
+  }
+  .meet-c-1,
+  .meet-c-4 {
+    display: block;
+  }
   /* Meet Team Ends */
   /* Main Ends */
 
@@ -572,6 +754,9 @@ footer {
   .habits-card-container {
     grid-template-columns: repeat(4, 1fr);
   }
+  .chp {
+    width: 50%;
+  }
   /* Change Habits Ends */
 
   /* Run Starts */
@@ -580,6 +765,11 @@ footer {
   }
   /* Run Starts */
 
+  /* Food Starts */
+  .food-card {
+    animation-duration: 20s;
+  }
+  /* Food Ends */
   /* BMI Starts */
   .bmi-inn {
     display: flex;
@@ -599,6 +789,11 @@ footer {
   /* Meet Team Starts */
 
   /* Meet Team Ends */
+  .meet-container {
+    grid-template-areas:
+      'meet-c-1 meet-c-2 meet-c-3'
+      'meet-c-4 meet-c-5 meet-c-6';
+  }
   /* Main Ends */
 
   /* Footer Starts */
@@ -617,4 +812,23 @@ footer {
     align-items: center;
   }
   /* Footer Ends */
+}
+
+@media screen and (min-width: 1200px) {
+  @keyframes food-card-anim2 {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-218px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .food-card {
+    animation-name: food-card-anim2;
+    animation-duration: 15s;
+  }
 }
