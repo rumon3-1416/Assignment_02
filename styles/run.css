@@ -13,6 +13,7 @@
 }
 .run-img {
   width: 100%;
+  border-radius: 18px;
 }
 .run-img img {
   width: 100%;
@@ -40,6 +41,10 @@
   }
   .run-img {
     width: 45%;
+    overflow: hidden;
+  }
+  .run-img img {
+    transform: scale(2) translate(-3rem, 2rem);
   }
   /* Run Ends */
 }
