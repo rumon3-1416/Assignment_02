@@ -1,5 +1,6 @@
 /* Meet Team Starts */
 .meet-sec > p {
+  max-width: 670px;
   margin: 14px auto 37px auto;
 }
 .meet-container {
@@ -44,6 +45,7 @@
 .meet-card img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   aspect-ratio: 7 / 6;
   border-radius: 18px;
 }

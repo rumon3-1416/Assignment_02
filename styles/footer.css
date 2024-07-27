@@ -42,6 +42,7 @@ footer {
   /* Footer Starts */
   .footer-h-content {
     width: 60%;
+    margin-bottom: 4rem;
   }
   .footer-desc-container {
     display: flex;

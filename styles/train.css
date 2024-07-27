@@ -1,7 +1,14 @@
 /* Training Section Starts */
+.train-sec > p {
+  max-width: 670px;
+}
 .train-img-container {
+  padding: 3rem 0 4rem 0;
   display: flex;
   flex-wrap: wrap;
+}
+.train-sec h2 {
+  margin-bottom: 14px;
 }
 .train-img {
   position: relative;
@@ -27,6 +34,7 @@
 .train-img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .train-img > div {
   width: 100%;
@@ -67,6 +75,9 @@
 /* Media Query */
 @media screen and (min-width: 576px) {
   /* Training Section Starts */
+  .train-img-container {
+    padding: 3.5rem 0 4.5rem 0;
+  }
   .train-img-1 {
     width: 30%;
   }
@@ -92,6 +103,9 @@
 
 @media screen and (min-width: 992px) {
   /* Training Section Starts */
+  .train-img-container {
+    padding: 4rem 0 5rem 0;
+  }
   .train-img-1 {
     width: 23%;
   }
